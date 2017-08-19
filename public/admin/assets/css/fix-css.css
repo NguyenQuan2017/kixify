@@ -1,0 +1,9 @@
+.btn-default{
+	color: #fff;
+    background-color: #2b3a49;
+    border-color: #ccc;
+    margin:5px auto;
+}
+.modal-header{
+	background-color: #eaeef3;
+}
