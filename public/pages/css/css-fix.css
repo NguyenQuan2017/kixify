@@ -1,0 +1,12 @@
+#subtotal-title {
+    font-weight: bold;
+}
+.imagecache{
+	padding-right: 10px;
+}
+.subtotal{
+	text-align: right;
+}
+#update-checkout-buttons {
+    float: right;
+}

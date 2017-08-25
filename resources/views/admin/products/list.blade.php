@@ -21,7 +21,7 @@
                   </header>
                   <div class="panel-body table-responsive">
                   <a href="{{route('product-add')}}" id="add_product" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;ADD</a>
-                     <table class="table convert-data-table table-bordered table-hover">
+                     <table class="table convert-data-table table-bordered table-hover"  >
                         <thead>
                            <tr>
                               <th>
@@ -49,7 +49,7 @@
                                  CONTENT
                               </th>
                               <th>IMAGE</th>
-                              <th style="width:200px">
+                              <th style="width:150px">
                                  ACTION
                               </th>
                            
@@ -67,18 +67,10 @@
                               <td>{{$item['style_code']}}</td>
                               <td>{{$item['description']}}</td>
                               <td>{{$item['content']}}</td>
-                              <td>{{$item['image']}}</td>
+                              <td> <img src="{{url('public/images/products/'.$item['image'])}}" alt="" style="width: 100px; height: 100px"  > </td>
+                             
                               <td>
-                              @if($item['parent_cat']==0)
-                              {{'None'}}
-                              @else
-                              <?php $parent_cate=DB::table('categories')->where('id',$item['parent_cat'])->first();
-                                    echo $parent_cate->name_cate;
-                               ?>
-                               @endif
-                              </td>
-                              <td>
-                              <a href="{{route('category-edit',$item['id'])}}" class="btn btn-primary"><i class="fa fa-pencil"></i>&nbsp;EDIT</a>
+                              <a href="{{route('category-edit',$item['id'])}}" class="btn btn-primary" style="margin:5px auto" ><i class="fa fa-pencil"></i>&nbsp;EDIT</a>
                               <a href="{{route('delete-category',$item['id'])}}" class="btn btn-danger confirm"><i class="fa fa-trash"></i> DELETE</a>
                               </td>
                             

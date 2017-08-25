@@ -48,6 +48,31 @@
             <button type="button" class="navbar-toggle visible-xs icons-nav"  id="icon-account-menu">
             <span class="sr-only">Toggle navigation</span>
             <a href="user/register.html"><i class="fa fa-user fa-2x"></i></a>                                </button>  
+            @if(isset($user))
+            <ul id="user-navigation" class="account-links hidden-xs">
+               <li class="nav-divider visible-xs"></li>
+               <li class="hide-mobile"><a href="/dashboard"><i class="fa fa-inbox fa-2x" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Dashboard"></i></a></li>
+               <li class="visible-xs"><a href="/dashboard"><i class="fa fa-inbox"></i>&nbsp;&nbsp;Dashboard</a></li>
+               <li class="nav-divider visible-xs"></li>
+               <li class="hide-mobile"><a href="/sell"><i class="fa fa-tag fa-2x" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Sell"></i></a></li>
+               <li class="visible-xs"><a href="/sell"><i class="fa fa-tag"></i>&nbsp;&nbsp;Sell</a></li>
+               <li class="nav-divider visible-xs"></li>
+               <li class="hide-mobile"><a href="/messages"><i class="fa fa-comment-o fa-2x with-badge" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Messages"></i></a></li>
+               <li class="visible-xs"><a href="/messages"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Messages</a></li>
+               <li class="nav-divider visible-xs"></li>
+               <li class="hide-mobile"><a href="/users/vanquan"><i class="fa fa-user fa-2x" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="My Profile"></i></a></li>
+               <li class="visible-xs"><a href="/users/vanquan"><i class="fa fa-user"></i>&nbsp;&nbsp;My Profile</a></li>
+               <li class="nav-divider visible-xs"></li>
+               <li class="hide-mobile"><a href="/node/17705481/edit"><i class="fa fa-gear fa-2x" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Settings"></i></a></li>
+               <li class="visible-xs"><a href="/node/17705481/edit"><i class="fa fa-wrench"></i>&nbsp;&nbsp;Settings</a></li>
+               <li class="nav-divider visible-xs"></li>
+               <li class="hide-mobile"><a href="/cart"><i class="fa fa-shopping-cart fa-2x  with-badge" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Shopping Cart"><span class="badge">{{Cart::count()}}</span></i></a></li>
+               <li class="visible-xs"><a href="/wants"><i class="fa fa-heart-o"></i>&nbsp;&nbsp;Wants</a></li>
+               <li class="nav-divider visible-xs"></li>
+               <li class="hide-mobile"><a href="{{route('logout-page')}}"><i class="fa fa-sign-out fa-2x" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Logout"></i></a></li>
+               <li class="visible-xs"><a href="{{route('logout-page')}}"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
+            </ul>
+            @else
             <ul id="user-navigation" class="account-links hidden-xs">
                <li class="nav-divider visible-xs"></li>
                <li class="hide-mobile"><a href="sell.html"><i class="fa fa-tag fa-2x" data-toggle="tooltip" data-placement="bottom" title="Sell"></i></a></li>
@@ -58,6 +83,7 @@
                <li class="nav-divider visible-xs"></li>
                <li class="visible-xs"><a href="{{route('login-register')}}"><i class="fa fa-sign-in"></i>&nbsp;&nbsp;Signup</a></li>
             </ul>
+            @endif
          </div>
          <div class="clearfix"></div>
       </div>

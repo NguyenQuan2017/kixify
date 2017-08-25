@@ -23,6 +23,8 @@
         <link href="{{asset('admin/plugins/datatables-scroller/css/scroller.dataTables.scss')}}" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('admin/assets/css/fix-css.css')}}">
         <link rel="stylesheet" href="{{asset('admin/assets/css/bootstrap-select.min.css')}}">
+         <link rel="stylesheet" href="{{asset('admin/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css')}}">
+    
    </head>
    <body>
       <div id="ui" class="ui">
@@ -64,7 +66,9 @@
       <script src="{{asset('admin/assets/js/main.js')}}"></script>
       <script src="{{asset('admin/assets/js/bootstrap-select.min.js')}}"></script>
       <script src="{{asset('admin/assets/js/jquery-confirm.min.js')}}"></script>
-
+    <script src="{{asset('admin/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
+      <script src="{{asset('admin/assets/js/init-datepicker.js')}}"></script>
+  
       @yield('script')
 
       <script>

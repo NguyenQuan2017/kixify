@@ -55,18 +55,20 @@
                      <div class="clearfix"></div>
                   </h3>
                   <div id='release-dates-continer'  class="top-seller-wrapper">
+                  @foreach($products as $item)
                      <div class='col-xs-6 col-sm-3 col-md-3 release-date-item-continer clear-padding'>
                         <div class='release-date-item-wrapper'>
                            <div class='release-date-image-wrapper'>
-                              <a href="{{route('view-product')}}" class='thumbnail'>
-                              <img  src="{{asset('pages/images/product_list/product.jpg')}}" alt="Air Jordan 5 White Cement" class="img-responsive imagecache imagecache-kofapp_list" width="250" height="200" />
+                              <a href="{{route('view_product',[$item->id,$item->slug])}}" class='thumbnail'>
+                              <img  src="{{url('public/images/products/'.$item['image'])}}" alt="Air Jordan 5 White Cement" class="img-responsive imagecache imagecache-kofapp_list" width="250" height="200" />
                               </a>
                            </div>
                            <div class="release-date-text-wrapper" >
-                              <div class='release-date-title'><a href="{{route('view-product')}}">Air Jordan 5 White Cement</a></div>
+                              <div class='release-date-title'><a href="{{route('view_product',[$item->id,$item->slug])}}">{{$item['name_product']}}</a></div>
                            </div>
                         </div>
                      </div>
+                   @endforeach  
                      <div class="clearfix"></div>
                   </div>
                </div>
@@ -85,7 +87,7 @@
                         <a href="search.html" class="btn btn-default btn-block gender-btn">Top Sellers</a>        
                      </div>
                      <div class="col-xs-4 col-sm-4 col-md-4 clear-padding  gender-right">
-                        <a href="{{route('release')}}" class="btn btn-default btn-block gender-btn">Releases</a>        
+                        <a href="{{route('upcoming')}}" class="btn btn-default btn-block gender-btn">Releases</a>        
                      </div>
                      <div class="clearfix"></div>
                   </div>

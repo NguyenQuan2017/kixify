@@ -12,12 +12,8 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-server"></i><span>Page Layouts</span><i class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="nav nav-sub">
-                            <li class="nav-sub-header"><a href="#"><span>Page Layouts</span></a></li>
-                            <li><a href="layout-blank.html"><span>Blank</span></a></li>
-                            
-                        </ul>
+                        <a href="{{route('category-list')}}"><i class="fa fa-server"></i><span>Categories</span><i class="fa fa-angle-right pull-right"></i></a>
+                     
                     </li>
 
                     <li>

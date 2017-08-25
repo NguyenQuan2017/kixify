@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
-   >
+   
    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -50,10 +50,11 @@
       <script type="text/javascript" src="{{asset('pages/js/js_3e790a33ff6e05237f7370ad0de794c6.js')}}"></script>
       <script src="{{asset('pages/js/jquery-1.9.1.js')}}"> </script>
       <script src="{{asset('pages/js/jquery.royalslider.min.js')}}"> </script>
+      <link rel="stylesheet" href="{{asset('pages/css/css-fix.css')}}">
       <script type="text/javascript">
-         <!--//--><![CDATA[//><!--
+         
           var $jq = jQuery.noConflict(true); window.jq = $jq
-         //--><!]]>
+        
       </script>
       <script type="text/javascript">
          (function (b, r, a, n, c, h, _, s, d, k) {
@@ -209,6 +210,10 @@
       <script type="text/javascript" src="{{asset('pages/js/js_e295d3597dc818dcb4abdd94a9691bf0.js')}}"></script>
       <div class="clearfix"></div>
       <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"720f13b38f","applicationID":"51794375","transactionName":"Y1ZWYEVZC0MCUhcKCVocdVdDUQpeTEMGDwNVQFFrU1kRVRBuFhMFW15dWlA=","queueTime":0,"applicationTime":713,"atts":"TxFVFg1DGE0=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+      <script src="{{asset('pages/js/update_cart.js')}}"> </script>
+     <!--  <script>
+        $("div .alert").slideUp(4000).delay(1000);
+      </script> -->
    </body>
    <!-- Mirrored from www.kixify.com/release-dates/upcoming by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Aug 2017 01:56:45 GMT -->
 </html>

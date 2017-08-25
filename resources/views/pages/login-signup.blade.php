@@ -36,8 +36,11 @@
          </div>
       </div>
       <div class="clearfix"></div>
+      @include('admin/notification/errors')
+         
       <div class="signup-pane login col-xs-12 col-sm-6 col-md-6">
-         <form action="/user/register"  accept-charset="UTF-8" method="post" id="user-login" class="form-horizontal ">
+         <form action="{{route('login-page')}}"  accept-charset="UTF-8" method="post" id="user-login" class="form-horizontal ">
+         {{csrf_field()}}
             <div>
                <div class="panel panel-default">
                   <div class="panel-heading">
@@ -46,11 +49,11 @@
                   <div class="panel-body">
                      <div class="form-group form-item form-item-textfield form-item-inline" id="edit-name-wrapper">
                         <label class="col-xs-12 col-sm-4 col-md-4 control-label" for="edit-name"><span class="form-required" title="This field is required.">*</span> Username or e-mail address</label>
-                        <div class="col-xs-12 col-sm-8 col-md-8"> <input type="text" maxlength="60" name="name" id="edit-name" size="60" value="" class="form-control form-text required" /></div>
+                        <div class="col-xs-12 col-sm-8 col-md-8"> <input type="text" maxlength="60" name="email" id="edit-name" size="60" value="" class="form-control form-text required" /></div>
                      </div>
                      <div class="form-group form-item form-item-password form-item-inline" id="edit-pass-wrapper">
                         <label class="col-xs-12 col-sm-4 col-md-4 control-label" for="edit-pass"><span class="form-required" title="This field is required.">*</span> Password</label>
-                        <div class="col-xs-12 col-sm-8 col-md-8"> <input type="password" name="pass" id="edit-pass"  maxlength="128"  size="60"  class="form-control form-text required" /></div>
+                        <div class="col-xs-12 col-sm-8 col-md-8"> <input type="password" name="password" id="edit-pass"  maxlength="128"  size="60"  class="form-control form-text required" /></div>
                      </div>
                      <input type="hidden" name="form_build_id" id="form-fhk4fO2Ej91TILIOUyVpaVhXse20f5u1h1QIRjf_ec4" value="form-fhk4fO2Ej91TILIOUyVpaVhXse20f5u1h1QIRjf_ec4"  />
                      <input type="hidden" name="form_id" id="edit-user-login" value="user_login"  />
@@ -67,32 +70,38 @@
          </form>
       </div>
       <div class="signup-pane register col-xs-12 col-sm-6 col-md-6">
-         <form action="/user/register"  accept-charset="UTF-8" method="post" id="user-register" class="form-horizontal ">
+         <form action="{{route('register')}}"  accept-charset="UTF-8" method="post" id="user-register" class="form-horizontal ">
+         {{csrf_field()}}
             <div>
                <div class="panel panel-default">
                   <div class="panel-heading">
                      <h4 class="title"><i class="fa fa-pencil"></i>&nbsp;SIGNUP</h4>
                   </div>
                   <div class="panel-body">
+                  
+                   <div class="form-group form-item form-item-textfield form-item-inline" id="edit-name-1-wrapper">
+                        <label class="col-xs-12 col-sm-4 col-md-4 control-label" for="edit-name-1"><span class="form-required" title="This field is required.">*</span> Name</label>
+                        <div class="col-xs-12 col-sm-8 col-md-8"> <input type="text" maxlength="60" name="name" id="edit-name-1" size="60" value="" class="form-control form-text required" /></div>
+                     </div>
                      <div class="form-group form-item form-item-textfield form-item-inline" id="edit-name-1-wrapper">
                         <label class="col-xs-12 col-sm-4 col-md-4 control-label" for="edit-name-1"><span class="form-required" title="This field is required.">*</span> Username</label>
-                        <div class="col-xs-12 col-sm-8 col-md-8"> <input type="text" maxlength="60" name="name" id="edit-name-1" size="60" value="" class="form-control form-text required" /></div>
+                        <div class="col-xs-12 col-sm-8 col-md-8"> <input type="text" maxlength="60" name="username" id="edit-name-1" size="60" value="" class="form-control form-text required" /></div>
                      </div>
                      <input type="hidden" name="form_build_id" id="form-7k0n3A63d6sXFXlA0M2WNOhpnl3uH-scrPRYPlcLeeY" value="form-7k0n3A63d6sXFXlA0M2WNOhpnl3uH-scrPRYPlcLeeY"  />
                      <input type="hidden" name="form_id" id="edit-user-register" value="user_register"  />
                      <div class="form-group form-item form-item-password_confirm form-item-indent" id="edit-pass-1-wrapper">
                         <div class="form-group form-item form-item-password form-item-inline" id="edit-pass-pass1-wrapper">
                            <label class="col-xs-12 col-sm-4 col-md-4 control-label" for="edit-pass-pass1"><span class="form-required" title="This field is required.">*</span> Password</label>
-                           <div class="col-xs-12 col-sm-8 col-md-8"> <input type="password" name="pass[pass1]" id="edit-pass-pass1"  maxlength="128"  size="25"  class="form-control form-text required password-field" /></div>
+                           <div class="col-xs-12 col-sm-8 col-md-8"> <input type="password" name="password" id="edit-pass-pass1"  maxlength="128"  size="25"  class="form-control form-text required password-field" /></div>
                         </div>
                         <div class="form-group form-item form-item-password form-item-inline" id="edit-pass-pass2-wrapper">
                            <label class="col-xs-12 col-sm-4 col-md-4 control-label" for="edit-pass-pass2"><span class="form-required" title="This field is required.">*</span> Confirm password</label>
-                           <div class="col-xs-12 col-sm-8 col-md-8"> <input type="password" name="pass[pass2]" id="edit-pass-pass2"  maxlength="128"  size="25"  class="form-control form-text required password-confirm" /></div>
+                           <div class="col-xs-12 col-sm-8 col-md-8"> <input type="password" name="re_password" id="edit-pass-pass2"  maxlength="128"  size="25"  class="form-control form-text required password-confirm" /></div>
                         </div>
                      </div>
                      <div class="form-group form-item form-item-textfield form-item-inline" id="edit-mail-wrapper">
                         <label class="col-xs-12 col-sm-4 col-md-4 control-label" for="edit-mail"><span class="form-required" title="This field is required.">*</span> E-mail address</label>
-                        <div class="col-xs-12 col-sm-8 col-md-8"> <input type="text" maxlength="64" name="mail" id="edit-mail" size="60" value="" class="form-control form-text required" /></div>
+                        <div class="col-xs-12 col-sm-8 col-md-8"> <input type="text" maxlength="64" name="email" id="edit-mail" size="60" value="" class="form-control form-text required" /></div>
                      </div>
                      <div class="signup-pane-form-footer col-xs-12 col-sm-8 col-md-8 col-sm-offset-4 col-md-offset-4">
                         <div class="form-group form-item form-item-checkbox form-item-indent" id="edit-terms-of-use-wrapper">

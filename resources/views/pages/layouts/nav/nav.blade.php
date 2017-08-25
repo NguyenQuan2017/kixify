@@ -1,8 +1,9 @@
  <nav id="menu">
          <ul>
             <li><a href="../searcha8fd.html?sort=created-desc">Newest</a></li>
+            <li><a href="/my-feed">MyFeed</a></li>
             <li><a href="../search.html">Top Sellers</a></li>
-            <li><a href="upcoming.html" class="active">Release Calendar</a></li>
+            <li><a href="{{route('upcoming')}}" class="active">Release Calendar</a></li>
             <li><a><b>Gender / Age</b></a></li>
             <li><a href="../search2404.html?gender[]=Men">Men</a></li>
             <li><a href="../search93b8.html?gender[]=Women">Women</a></li>

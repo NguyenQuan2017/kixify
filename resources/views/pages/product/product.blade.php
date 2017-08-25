@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-xs-12 col-sm-12 col-md-12 remove-padding" id="content-container-wrapper">
    <a id="main-content"></a>
-   <h1 class="title hidden-xs" id="page-title">100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005</h1>
+   <h1 class="title hidden-xs" id="page-title">{{$products['title']}}</h1>
    <div id="content-center-wrapper">
    
       <div id="node-17254556" class="node node-type-product build-mode-full node-content-store-banner clearfix" >
@@ -13,55 +13,21 @@
                   <div id="product-royal" class="add-row-margins">
                      <div id="product-image-continer" class="royalSlider rsDefaultInv">
                         <div class="rsContent">
-                           <a class="rsImg" data-rsbigimg="https://2.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455361_324151.jpg" 
-                              href="https://2.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455361_324151.jpg">
-                           <img src="https://2.kixify.com/sites/default/files/imagecache/uc_thumbnail/product/2017/08/02/p_17254556_88455361_324151.jpg" alt="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" title="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" width="135" height="135" class="img-responsive rsTmb img-responsive imagecache imagecache-uc_thumbnail">                                        </a>
+                           <a class="rsImg" data-rsbigimg="{{url('public/images/products/'.$products['image'])}}" 
+                              href="{{url('public/images/products/'.$products['image'])}}">
+                           <img  src="{{url('public/images/products/'.$products['image'])}}" alt="adidas NMD R1 Zebra Black" class="img-responsive imagecache rsTmb imagecache-uc_thumbnail" />
+                           </a>
                         </div>
+                        @foreach($image_detail as $image_details)
                         <div class="rsContent">
-                           <a class="rsImg" data-rsbigimg="https://2.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455341_324151.jpg" 
-                              href="https://2.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455341_324151.jpg">
-                           <img src="https://2.kixify.com/sites/default/files/imagecache/uc_thumbnail/product/2017/08/02/p_17254556_88455341_324151.jpg" alt="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" title="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" width="135" height="135" class="img-responsive rsTmb img-responsive imagecache imagecache-uc_thumbnail">                                        </a>
+                           <img  src="{{url('public/images/productDetail/',$image_details['image'])}}" alt="adidas NMD R1 Zebra Black" class="img-responsive imagecache rsTmb imagecache-uc_thumbnail" />
+                           <a class="rsImg" data-rsbigimg="{{url('public/images/productDetail/',$image_details['image'])}}" 
+                              href="{{url('public/images/productDetail/',$image_details['image'])}}">
+                           <img  src="{{url('public/images/productDetail/',$image_details['image'])}}" alt="adidas NMD R1 Zebra Black" class="img-responsive imagecache rsTmb imagecache-uc_thumbnail" />
+                           </a>
                         </div>
-                        <div class="rsContent">
-                           <a class="rsImg" data-rsbigimg="https://2.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455346_324151.jpg" 
-                              href="https://2.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455346_324151.jpg">
-                           <img src="https://2.kixify.com/sites/default/files/imagecache/uc_thumbnail/product/2017/08/02/p_17254556_88455346_324151.jpg" alt="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" title="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" width="135" height="135" class="img-responsive rsTmb img-responsive imagecache imagecache-uc_thumbnail">                                        </a>
-                        </div>
-                        <div class="rsContent">
-                           <a class="rsImg" data-rsbigimg="https://2.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455351_324151.jpg" 
-                              href="https://2.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455351_324151.jpg">
-                           <img src="https://2.kixify.com/sites/default/files/imagecache/uc_thumbnail/product/2017/08/02/p_17254556_88455351_324151.jpg" alt="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" title="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" width="135" height="135" class="img-responsive rsTmb img-responsive imagecache imagecache-uc_thumbnail">                                        </a>
-                        </div>
-                        <div class="rsContent">
-                           <a class="rsImg" data-rsbigimg="https://1.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455356_324151.jpg" 
-                              href="https://1.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455356_324151.jpg">
-                           <img src="https://1.kixify.com/sites/default/files/imagecache/uc_thumbnail/product/2017/08/02/p_17254556_88455356_324151.jpg" alt="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" title="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" width="135" height="135" class="img-responsive rsTmb img-responsive imagecache imagecache-uc_thumbnail">                                        </a>
-                        </div>
-                        <div class="rsContent">
-                           <a class="rsImg" data-rsbigimg="https://4.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455366_324151.jpg" 
-                              href="https://4.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455366_324151.jpg">
-                           <img src="https://4.kixify.com/sites/default/files/imagecache/uc_thumbnail/product/2017/08/02/p_17254556_88455366_324151.jpg" alt="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" title="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" width="135" height="135" class="img-responsive rsTmb img-responsive imagecache imagecache-uc_thumbnail">                                        </a>
-                        </div>
-                        <div class="rsContent">
-                           <a class="rsImg" data-rsbigimg="https://1.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455371_324151.jpg" 
-                              href="https://1.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455371_324151.jpg">
-                           <img src="https://1.kixify.com/sites/default/files/imagecache/uc_thumbnail/product/2017/08/02/p_17254556_88455371_324151.jpg" alt="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" title="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" width="135" height="135" class="img-responsive rsTmb img-responsive imagecache imagecache-uc_thumbnail">                                        </a>
-                        </div>
-                        <div class="rsContent">
-                           <a class="rsImg" data-rsbigimg="https://5.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455376_324151.jpg" 
-                              href="https://5.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455376_324151.jpg">
-                           <img src="https://5.kixify.com/sites/default/files/imagecache/uc_thumbnail/product/2017/08/02/p_17254556_88455376_324151.jpg" alt="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" title="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" width="135" height="135" class="img-responsive rsTmb img-responsive imagecache imagecache-uc_thumbnail">                                        </a>
-                        </div>
-                        <div class="rsContent">
-                           <a class="rsImg" data-rsbigimg="https://5.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455381_324151.jpg" 
-                              href="https://5.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455381_324151.jpg">
-                           <img src="https://5.kixify.com/sites/default/files/imagecache/uc_thumbnail/product/2017/08/02/p_17254556_88455381_324151.jpg" alt="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" title="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" width="135" height="135" class="img-responsive rsTmb img-responsive imagecache imagecache-uc_thumbnail">                                        </a>
-                        </div>
-                        <div class="rsContent">
-                           <a class="rsImg" data-rsbigimg="https://3.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455386_324151.jpg" 
-                              href="https://3.kixify.com/sites/default/files/imagecache/product_full/product/2017/08/02/p_17254556_88455386_324151.jpg">
-                           <img src="https://3.kixify.com/sites/default/files/imagecache/uc_thumbnail/product/2017/08/02/p_17254556_88455386_324151.jpg" alt="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" title="100% AUTHENTIC VNDS NIKE AIR JORDAN RETRO 13 BRED 10.5 2005" width="135" height="135" class="img-responsive rsTmb img-responsive imagecache imagecache-uc_thumbnail">                                        </a>
-                        </div>
+                        @endforeach
+                       
                      </div>
                   </div>
                   <div class="clearfix"></div>
@@ -69,13 +35,14 @@
                </div>
             </div>
             <div class="sidebar-contained product-sidebar-first col-xs-12 col-sm-8 col-md-6 clear-padding">
+            @include('admin/notification/errors')
                <div class="product-sidebar-second col-xs-12 col-sm-6 col-md-6 clear-padding">
                   <div id="block-cargoh_helper-cargoh_product_offer" class="block block-cargoh_helper">
                      <div class="col-xs-6 col-sm-6 col-md-6 two-btn clear-padding want-wrapper">
                         <div class="seller_links">
                            <div class="item-list">
                               <ul class="list-unstyled">
-                                 <li class="first last">    <a href="https://www.kixify.com/flag/flag/want/17254556?destination=node%2F17254556&amp;token=3ef1787a8d7e347b53cf16a245788707" title="" class="flag flag-action flag-link-normal btn btn-default btn-block" rel="nofollow">Want<span class="flag-counter">+2</span><span class="flag-throbber">&nbsp;</span></a>
+                                 <li class="first last"> <a href="https://www.kixify.com/flag/flag/want/17254556?destination=node%2F17254556&amp;token=3ef1787a8d7e347b53cf16a245788707" title="" class="flag flag-action flag-link-normal btn btn-default btn-block" rel="nofollow">Want<span class="flag-counter">+2</span><span class="flag-throbber">&nbsp;</span></a>
                                  </li>
                               </ul>
                            </div>
@@ -88,27 +55,51 @@
                   </div>
                   <div id="block-cargoh_helper-cargoh_add_to_cart" class="block block-cargoh_helper">
                      <div class="add-to-cart">
-                        <form action="https://www.kixify.com/user/register?destination=node/17254556"  accept-charset="UTF-8" method="post" id="uc-product-add-to-cart-form-17254556-1" class="form-horizontal ">
+                        <form action="{{route('addToCard',$products->id)}}"  accept-charset="UTF-8" method="post" id="uc-product-add-to-cart-form-17254556-1" class="form-horizontal ">
+                          {{csrf_field()}}
                            <div>
                               <div class="add-to-cart" id="add-to-card-wrapper">
                                  <div id="product-cart_btn" class="col-xs-4 col-sm-12 col-md-12 clear-padding add-paddings">
-                                    <div class="button-wrapper button-add-to-cart"><input type="submit" name="op" id="edit-submit-17254556" value="Add to cart"  class="btn btn-default form-submit btn-kixify btn-block" unbxdattr="AddToCart" unbxdparam_sku="bc24961f98dac41a5c360e25b1fee609"/></div>
+
+                                    <div class="button-wrapper button-add-to-cart">
+                                    @if(isset($user))
+                                    <button type="submit" class="btn btn-default  btn-kixify btn-block">Add to card</button>
+                                     @else
+                                      <a href="{{route('login-register')}}" class="btn btn-default  btn-kixify btn-block" >Add to cart</a>
+                                    @endif     
+                                    </div>
+                              
+                                 
                                  </div>
                                  <div class="hidden-xs">
                                     <div class="clearfix"></div>
                                     <div class="price-wrapper" id="sell-price-offer-wrapper">
-                                       <div class="sellprice col-xs-12 col-sm-12 col-md-12 clear-padding">$200</div>
+                                       <div class="sellprice col-xs-12 col-sm-12 col-md-12 clear-padding">${{$products->price}}</div>
                                        <div class="clearfix"></div>
                                     </div>
                                     <div class="clearfix"></div>
                                  </div>
                                  <div class="col-xs-4 visible-xs" id="mobile-price-info">
-                                    $200.00        
+                                    ${{$products->price}}       
                                  </div>
                                  <div class="col-xs-4 col-sm-6 col-md-6">
                                     <div class="attributes">
                                        <div class="attribute attribute-6 odd">
-                                          <div class="well well-sm white">Size:&nbsp;&nbsp;<b>10.5</b><input type="hidden" name="attributes[6]" id="select-size-attributes" value="102"  /></div>
+                                    
+                                          <div class="form-group form-item form-item-select form-item-inline" id="select-size-attributes-wrapper">
+                                            
+                                     
+                                           <select name="size" class="form-control form-select required" id="select-size-attributes">
+                                           <option value="" >Select size</option>
+                                            @foreach($size_product as $item)
+                                          @foreach($item->sizes as $size)<option value="{{$size['size']}}">{{$size['size']}}</option>
+                                             @endforeach
+                                          @endforeach
+                                          </select>
+                                          
+                                          </div>        
+                                                
+                                        
                                        </div>
                                     </div>
                                  </div>
@@ -266,7 +257,7 @@
                         <div class="slide-wrapper row clear-margin">
                            <div class="slider">
                               <p class="body">
-                              <p>Up for sale today is a VNDS pair of nike air jordan 13 bred size 10.5.  These were released as a limited drop in 2005. They were extremely limited and sold out instantly. They were only released in select stores. These pair is size 10.5 and comes with OG everything. They have been worn 2 and is in VNDS condition. 100% authentic or your money back. Heres your chance to get them now because the price will only increase. Local meet up in NYC is accepted. Buy 2 pairs and the second pair ships free. Email me with offers. Any questions please email me. IF YOU MAKE AN OFFER YOU HAVE 24 HOURS TO PAY. PLEASE DONT WASTE MY TIME WITH EXCUSES, AND I WONT WASTE YOURS </p>
+                              <p>{{$products['content']}}</p>
                               </p>
                            </div>
                            <div class="slider-menu">

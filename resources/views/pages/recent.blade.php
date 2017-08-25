@@ -22,37 +22,38 @@
             </div>
          </form>
          <ul class="pull-right  nav nav-bar navbar-collapse sort-navbar-collapse  nav-pills release-dates-tabs">
-            <li >
-               <a href='recent.html'>recent</a>
+            <li class="active" >
+               <a href='{{route("recent")}}'>recent</a>
             </li>
-            <li class="active">
-               <a href='upcoming.html'>upcoming</a>
+            <li >
+               <a href='{{route("upcoming")}}'>upcoming</a>
             </li>
          </ul>
          <div class="clearfix"></div>
       </div>
       <div id='release-dates-continer'>
+      @foreach($products as $item)
          <div class='col-xs-6 col-sm-3 col-md-3 release-date-item-continer clear-padding'>
             <div class='release-date-item-wrapper'>
                <div class="release-event-date-wrapper">
                   <div class="event-date first-event">
-                     <div class="date" >15</div>
-                     <div class="month" >Aug</div>
+                     <div class="date" >{{Carbon\Carbon::parse($item->release_date)->format('d')}}</div>
+                     <div class="month" >{{Carbon\Carbon::parse($item->release_date)->format('m')}}</div>
                   </div>
                </div>
                <div class='release-date-image-wrapper'>
-                  <a href="../nike-pg-1-gs-grape.html" class='thumbnail'>
-                  <img  src="{{asset('pages/images/product_list/product.jpg')}}" alt="Nike PG 1 GS Grape" class="img-responsive imagecache imagecache-kofapp_list"  width="250" height="200" />
+                  <a href="{{route('product',[$item->id,$item->slug])}}" class='thumbnail'>
+                  <img  src="{{url('public/images/products/'.$item['image'])}}" alt="Nike PG 1 GS Grape" class="img-responsive imagecache imagecache-kofapp_list"  width="250" height="200" />
                   </a>
                </div>
                <div class="release-date-text-wrapper" >
-                  <div class='release-date-title'><a href="../nike-pg-1-gs-grape.html">Nike PG 1 GS Grape</a></div>
-                  <div class='release-date-style'>Black/Court Purple-Hyper Grape</div>
+                  <div class='release-date-title'><a href="../nike-pg-1-gs-grape.html">{{$item['name_product']}}</a></div>
+                  <div class='release-date-style'>{{$item['release_style']}}</div>
                </div>
             </div>
          </div>
-
-      <div class='col-xs-6 col-sm-3 col-md-3 release-date-item-continer clear-padding'>
+      @endforeach   
+         <!-- <div class='col-xs-6 col-sm-3 col-md-3 release-date-item-continer clear-padding'>
             <div class='release-date-item-wrapper'>
                <div class="release-event-date-wrapper">
                   <div class="event-date">
@@ -70,20 +71,7 @@
                   <div class='release-date-style'>Black/Court Purple-Hyper Grape</div>
                </div>
             </div>
-         </div>
-
-    
-       
-      
-        
-     
-      
-
-      
-  
-        
-
-        
+         </div> -->
          <div class="clearfix"></div>
       </div>
       <div class="item-list">
@@ -97,14 +85,11 @@
 </div>
 <div class="clearfix"></div>
 <style>
-    .event-date .date{
-        margin: -34px 11px
-    }
-    .event-date .month{
-        margin:-1px 6px;
-    }
-
-
-
+   .event-date .date{
+   margin: -34px 11px
+   }
+   .event-date .month{
+   margin:-1px 6px;
+   }
 </style>
 @endsection

@@ -13,11 +13,14 @@
 
 Route::get('/',['as'=>'trangchu','uses'=>'PageController@home']);
 Route::get('/about',['as'=>'about','uses'=>'PageController@about']);
-Route::get('/release',['as'=>'release','uses'=>'PageController@release']);
-Route::get('/view-product',['as'=>'view-product','uses'=>'PageController@view_product']);
+Route::get('/release/upcoming',['as'=>'upcoming','uses'=>'PageController@upcoming']);
+Route::get('/release/recent',['as'=>'recent','uses'=>'PageController@recent']);
+
+Route::get('/view-product/{id}/{slug}',['as'=>'view_product','uses'=>'PageController@view_product']);
 Route::get('/search',['as'=>'search','uses'=>'PageController@search_result']);
+
 Route::get('/newest',['as'=>'newest','uses'=>'PageController@newest']);
-Route::get('/product',['as'=>'product','uses'=>'PageController@product']);
+Route::get('/product/{id}/{slug}',['as'=>'product','uses'=>'PageController@product']);
 Route::get('/buyer',['as'=>'buyer','uses'=>'PageController@buyer']);
 Route::get('/faq',['as'=>'faq','uses'=>'PageController@faq']);
 Route::get('/privacy',['as'=>'privacy','uses'=>'PageController@privacy']);
@@ -26,6 +29,15 @@ Route::get('/terms-user',['as'=>'terms-user','uses'=>'PageController@terms_user'
 Route::get('/reviews',['as'=>'reviews','uses'=>'PageController@reviews']);
 Route::get('/sell',['as'=>'sell','uses'=>'PageController@sell']);
 Route::get('/user/register',['as'=>'login-register','uses'=>'PageController@login_signup']);
+
+Route::post('/addtocard/{id}',['as'=>'addToCard','uses'=>'PageController@addToCard']);
+
+Route::get('/cart',['as'=>'cart','uses'=>'PageController@cart']);
+Route::get('/delete-cart/{id}',['as'=>'delete-cart','uses'=>'PageController@delete_cart']);
+Route::get('/update-cart/{id}/{qty}',['as'=>'update-cart','uses'=>'PageController@update_cart']);
+Route::post('/register',['as'=>'register','uses'=>'PageController@postRegister']);
+Route::post('/login-page',['as'=>'login-page','uses'=>'PageController@postLogin']);
+Route::get('/logout-page',['as'=>'logout-page','uses'=>'PageController@logout']);
 
 
 

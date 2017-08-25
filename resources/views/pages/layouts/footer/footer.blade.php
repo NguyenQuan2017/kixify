@@ -5,7 +5,7 @@
       </div>
       <div class="col-xs-6 col-sm-6 col-md-6 footer-devider footer-devider-right">
          <div class="footer-message pull-left navbar-text clear-margin mobile-block">
-            <a href="{{route('buyer')}}">BUYER PROTECTION</a><span class="hide-mobile">&nbsp;/&nbsp;</span><a href="{{route('release')}}">RELEASE DATES</a><span class="hide-mobile">&nbsp;/&nbsp;</span><a href="{{route('sell')}}">SELL</a><span class="hide-mobile">&nbsp;/&nbsp;</span><a href="{{route('reviews')}}">REVIEWS</a>                                
+            <a href="{{route('buyer')}}">BUYER PROTECTION</a><span class="hide-mobile">&nbsp;/&nbsp;</span><a href="{{route('upcoming')}}">RELEASE DATES</a><span class="hide-mobile">&nbsp;/&nbsp;</span><a href="{{route('sell')}}">SELL</a><span class="hide-mobile">&nbsp;/&nbsp;</span><a href="{{route('reviews')}}">REVIEWS</a>                                
          </div>
          <div class="hidden">
             <ul class="footer-social-links nav navbar-nav nav-pills nav-collapse">

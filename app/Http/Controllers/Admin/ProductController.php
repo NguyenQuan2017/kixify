@@ -10,6 +10,9 @@ use App\Models\Size;
 use App\Models\CateProduct;
 use App\Models\SizeProduct;
 use App\Models\ProductImage;
+use Validator;
+use Carbon\Carbon;
+use Input;
 
 class ProductController extends Controller
 {
@@ -37,9 +40,7 @@ class ProductController extends Controller
     		'style_code'=>'required',
     		'description'=>'required',
     		'content'=>'required',
-    		'image'=>'image|mimes:jpg,png',
-    		'cate'=>'required',
-    		'size'=>'required'
+    	
     	];
     	$messages=[
     		'name_product.required'=>'Vui lòng nhập tên sản phẩm',
@@ -50,38 +51,49 @@ class ProductController extends Controller
     		'style_code.required'=>'Vui lòng nhập mã code',
     		'description.required'=>'Vui lòng nhập mô tả',
     		'content.required'=>'Vui lòng nhập nội dung',
-    		'image.image'=>'Vui lòng chọn hình ảnh',
-    		'image.mimes'=>'Hình ảnh không đúng định dạng',
-    		'cate'=>'Vui lòng chọn danh mục',
-    		'size.required'=>'Vui lòng chọn kích thước'
-
+    		
     	];
     	$validator=Validator::make($request->all(),$rules,$messages);
 
     	if($validator->passes()){
-
+            $file_img=$request->file('image')->getClientOriginalName();
     		$products=new Product;
     		$products->name_product=$request->name_product;
+            $products->slug=changeTitle($request->name_product);
     		$products->title=$request->title;
     		$products->price=$request->price;
-    		$products->release_date=$request->release_date;
+    		$products->release_date=Carbon::parse($request->release_date)->format('y/m/d');
     		$products->release_style=$request->release_style;
     		$products->style_code=$request->style_code;
     		$products->description=$request->description;
     		$products->content=$request->content;
-    		$products->image=$request->image;
-    		// $products->save();
+    		$products->image=$file_img;
+            $request->file('image')->move('public/images/products/',$file_img);
+    		$products->save();
+            foreach($request->cate as $cate_id){
+            $products->categories()->attach($cate_id);
+            }
+            foreach($request->size as $size_id){
+            $products->sizes()->attach($size_id);
+            }
+            $product_id=$products->id;
+            if(Input::hasFile('productimage')){
+             
+                foreach($request->productimage as $file){
+                    if(isset($file)){
+                    $product_images=new ProductImage;
+                    $product_images->image=$file->getClientOriginalName();
+                    $product_images->product_id=$product_id;
+                    $file->move('public/images/productDetail/',$file->getClientOriginalName());
+                    $product_images->save();
 
-    		$product_id=$products->id;
-    		$product_images=new ProductImage;
-    		$product_images->image=$request->fproductimage;
-    		$product_id=$product_id;
-    		// $product_images->save();
-    		// $product=Product:find($id);
-      //       $cate_id=products->categories()->attach($id);
-      //       dd($cate_id);
-    		// $cateproducts= new CateProduct;
-    		// $product
+                    }
+                }
+            }
+    		
+
+            return redirect()->route('product-list')->with('messages','Add Success');
+    	
     	}
     	else{
 
